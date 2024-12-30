@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Booking from "./Booking.jsx";
 import Signup from "./Signup.jsx";
 import Login from "./Login.jsx";
-import { userAuth } from "./store/userAuth.js";
+import { userAuth } from "./store/auth.js";
 
 export default function App() {
     const [selectedCategory, setSelectedCategory] = useState(null);
