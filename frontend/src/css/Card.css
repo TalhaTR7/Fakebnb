@@ -1,0 +1,139 @@
+.container {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 998;
+  color: #000;
+
+  &.dark {
+    border-color: transparent;
+  }
+
+  .rating-span {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px #bbb;
+    border-radius: 50px;
+    font: 16px Fakebnb;
+    padding: 3px 12px;
+
+    .dark & {
+      background-color: #222;
+      box-shadow: none;
+      color: #fff;
+    }
+  }
+
+  .cover {
+    background: url("../assets/card-bg.png");
+    background-size: cover;
+    aspect-ratio: 16/12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background 0.5s ease,
+      border-radius 0.3s ease;
+    animation: background 1s forwards;
+
+    &.dark {
+      background: url("../assets/dark/card-bg-dark.png");
+    }
+
+    img {
+      width: 120px;
+      top: 50%;
+      left: 50%;
+      transition: transform 0.3s ease;
+      animation: all 1s forwards;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px #ddd;
+    cursor: pointer;
+
+    .cover {
+      border-radius: 10px 10px 0 0;
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    &.dark {
+      box-shadow: 0 0 15px #070707;
+    }
+  }
+
+  .primary {
+    font-size: 18px;
+    font-family: Fakebnb;
+
+    .dark & {
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+
+  .secondary {
+    font-size: 18px;
+    font-family: Fakebnb;
+    opacity: 75%;
+
+    .dark & {
+      color: #fff;
+      opacity: 50%;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 20px;
+    justify-content: space-between;
+
+    .upper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      img {
+        width: 40px;
+
+        .dark & {
+          filter: invert(1);
+        }
+      }
+    }
+
+    .lower {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,574 @@
+header {
+    border-bottom: 1px #aaa solid;
+    z-index: 1000;
+
+    img {
+        width: 150px;
+        margin: 30px 200px;
+        background-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+.absolute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 400px;
+    margin-top: 100px;
+
+
+    .a {
+        position: absolute;
+        margin-left: -60px;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+
+        i {
+            background-color: transparent;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        &:hover {
+            background-color: #eee;
+            cursor: pointer;
+        }
+    }
+
+
+    h1 {
+        font-family: Fakebnb;
+        font-size: 30px;
+        color: #333;
+    }
+
+    &.dark {
+        color: #fff;
+
+        h1,
+        i {
+            color: #fff;
+        }
+
+        a:hover {
+            background-color: #333;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 400px;
+    align-items: flex-start;
+
+    .left-section {
+        width: 60%;
+
+        h1 {
+            font: 24px Fakebnb;
+        }
+
+
+        .rare-find {
+            box-shadow: 0 5px 15px #ccc;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    font: 24px Fakebnb;
+                }
+
+                span {
+                    font: 18px Arial;
+                    color: #333;
+                }
+            }
+
+            i {
+                font-size: 40px;
+                color: #333;
+                margin-right: 30px;
+
+            }
+        }
+
+        .visit-info {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 0;
+            padding-bottom: 30px;
+            border-bottom: 1px #aaa solid;
+
+
+            div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin: 10px 0;
+
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5px;
+
+                    p {
+                        font: 20px Arial;
+                        color: #000;
+                    }
+
+                    span {
+                        font: 18px Arial;
+                        color: #666;
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: row;
+                    margin-right: 30px;
+                    gap: 20px;
+
+                    span {
+                        font: 24px Arial;
+                        color: #000;
+                    }
+
+                    i {
+                        padding: 10px;
+                        border-radius: 20px;
+                        width: 35px;
+                        height: 35px;
+                        background-color: #4b67d2;
+                        color: #fff;
+
+                        &:hover {
+                            background-color: #2943ab;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .payment-info {
+            margin: 30px 0;
+            padding-bottom: 50px;
+            border-bottom: 1px #aaa solid;
+
+            .banks {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 30px;
+
+                img {
+                    width: 70px;
+                }
+            }
+
+            .card-info {
+                display: flex;
+                flex-direction: column;
+
+                .card-number,
+                .card-holder {
+
+                    margin-top: 30px;
+
+                    label {
+                        font: 18px Arial;
+                        color: #333;
+                        margin-left: 10px;
+                    }
+
+                    input {
+                        margin-top: 10px;
+                        padding: 15px;
+                        font: 18px Consolas;
+                        width: 100%;
+                        border-radius: 10px;
+                        border: 1px #777 solid;
+                        background-color: transparent;
+                        outline: none;
+
+                        &::placeholder {
+                            color: #000;
+                            opacity: 0.4;
+                        }
+                    }
+                }
+
+                .other-details {
+                    display: flex;
+                    gap: 15px;
+
+                    .exp-date,
+                    .cvv {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 30px;
+
+                        label {
+                            font: 18px Arial;
+                            color: #333;
+                            margin-left: 10px;
+                        }
+
+                        input {
+                            margin-top: 10px;
+                            padding: 15px;
+                            font: 18px Consolas;
+                            border-radius: 10px;
+                            border: 1px #777 solid;
+                            background-color: transparent;
+                            outline: none;
+
+                            &::placeholder {
+                                color: #000;
+                                opacity: 0.4;
+                            }
+                        }
+                    }
+                }
+
+                input {
+                    &::placeholder {
+                        font: 18px Consolas;
+                    }
+
+                    &:focus {
+                        border: 1px #000 solid;
+                    }
+                }
+            }
+        }
+
+
+        .cancellation,
+        .ground-rules {
+            margin: 50px auto;
+            padding-bottom: 50px;
+            border-bottom: 1px #aaa solid;
+
+            p {
+                font: 18px Arial;
+                margin-top: 10px;
+                line-height: 1.5;
+                color: #333;
+            }
+
+            li {
+                color: #333;
+            }
+
+            &.ground-rules {
+
+                p,
+                li {
+                    font: 18px Arial;
+                }
+            }
+        }
+
+
+        .checkout {
+
+            p {
+                text-align: justify;
+                font: 14px Arial;
+                cursor: auto;
+                margin: 30px 0;
+                color: #666;
+                line-height: 1.5;
+            }
+
+            button {
+                font: 20px Fakebnb;
+                padding: 15px;
+                width: 100%;
+                border: none;
+                border-radius: 15px;
+                background-color: #4b67d2;
+                color: #fff;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #2943ab;
+                }
+            }
+        }
+
+
+        &.dark {
+
+            h1 {
+                color: #fff;
+            }
+
+            p,
+            li {
+                color: #ccc;
+            }
+
+            .rare-find {
+                color: #fff;
+                box-shadow: 0 5px 15px #050505;
+
+                span {
+                    color: #aaa;
+                }
+
+                i {
+                    color: #fff;
+                }
+            }
+
+            .visit-info {
+                div {
+                    .left {
+                        p {
+                            color: #fff;
+                        }
+
+                        span {
+                            color: #aaa;
+                        }
+                    }
+
+                    .right {
+                        i {
+                            color: #fff;
+                            background-color: #222;
+
+                            &:hover {
+                                background-color: #444;
+                            }
+                        }
+
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .payment-info {
+                .card-info {
+                    .card-holder,
+                    .card-number,
+                    .other-details .exp-date,
+                    .other-details .cvv {
+
+                        label {
+                            color: #fff;
+                        }
+
+                        input {
+                            color: #fff;
+                            border-color: #777;
+
+                            &::placeholder {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            button {
+                background-color: #333;
+
+                &:hover {
+                    background-color: #444;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    .right-section {
+        width: 35%;
+        position: sticky;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px #aaa solid;
+        top: 60px;
+
+
+        img {
+            border-radius: 12px;
+            box-shadow: 0 4px 7px #aaa;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            border-bottom: 1px #aaa solid;
+            padding-bottom: 25px;
+
+            h1 {
+                font-family: Fakebnb;
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 7px;
+            }
+
+            span {
+                font-family: Arial;
+                font-size: 18px;
+                color: #333;
+            }
+        }
+
+
+        .pricing {
+            h1 {
+                font-family: Fakebnb;
+                font-size: 25px;
+                font-weight: normal;
+                margin: 20px auto;
+            }
+
+            .price {
+                font: 18px Arial;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 5px 0;
+                color: #333;
+            }
+
+            .total {
+                border-top: 1px #aaa solid;
+                margin: 10px 0;
+                padding-top: 15px;
+            }
+        }
+
+
+        &.dark {
+            border: none;
+            box-shadow: 0 5px 15px #050505;
+
+            img {
+                box-shadow: none;
+            }
+
+            h1 {
+                color: #fff;
+            }
+
+            span {
+                color: #aaa;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    padding: 50px 350px;
+    margin-top: 100px;
+    font-family: Arial;
+    color: #666;
+    border-top: 1px #aaa solid;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+        text-align: left;
+    }
+
+    span {
+        margin: 0 10px;
+    }
+
+    .socials {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+
+        i {
+            color: #333;
+            font-size: 28px;
+            margin: 0 7px;
+            cursor: pointer;
+        }
+    }
+
+    i,
+    p,
+    h4,
+    button,
+    .fa-arrow-left,
+    .fa-arrow-right {
+        cursor: pointer;
+    }
+
+    &.dark {
+        border: none;
+        background-color: #171717;
+
+        .socials i,
+        p,
+        h4 {
+            color: #aaa;
+        }
+    }
+}

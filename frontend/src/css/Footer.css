@@ -1,0 +1,136 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 350px;
+    margin-top: 50px;
+    background-color: #f7f7f7;
+    color: #666;
+    font-family: Arial;
+    transition: color 0.5s ease;
+
+    .sponsors {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin: 50px 0;
+
+        img {
+            height: 50px;
+            cursor: pointer;
+        }
+    }
+
+
+    h2 {
+        font-family: Fakebnb;
+        font-weight: normal;
+        font-size: 30px;
+        margin: 20px 0;
+        text-align: left;
+    }
+
+    .upper-part {
+        display: flex;
+        flex-direction: row;
+
+        .columns {
+            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0;
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+
+            a {
+                cursor: pointer;
+                width: 20px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+    .lower-part {
+        border-top: 2px #aaa solid;
+        padding-top: 50px;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+            text-align: left;
+            cursor: pointer;
+        }
+
+        h4 {
+            cursor: pointer;
+        }
+
+        span {
+            margin: 0 10px;
+            cursor: default;
+        }
+    }
+
+    .socials {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+
+        i {
+            color: #333;
+            font-size: 28px;
+            margin: 0 7px;
+            cursor: pointer;
+        }
+    }
+
+
+    &.dark {
+        background-color: #171717;
+
+        h2,
+        .upper-part h4,
+        .upper-part a,
+        .lower-part .socials i,
+        .lower-part p,
+        .lower-part h4 {
+            color: #aaa;
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .footer {
+        margin: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+
+        .upper-part,
+        .lower-part {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        span {
+            position: absolute;
+            color: transparent;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Kaneda';
+    src: url('./assets/fonts/Kaneda.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Kaneda italic';
+    src: url('./assets/fonts/Kaneda-italic.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Built Titling';
+    src: url('./assets/fonts/Built Titling.TTF');
+}
+
+@font-face {
+    font-family: 'Fakebnb';
+    src: url('./assets/fonts/Fakebnb.TTF');
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --large: 30px;
+    --medium: 18px;
+    --small: 15px;
+    --primary: #4b67d2;
+    --primary-hover: #2943ab;
+    --primary-dark: #00ccff;
+}
+
+
+body {
+    background-color: #fff;
+
+    .dark {
+        background-color: #111;
+    }
+
+    ::selection {
+        background-color: #222;
+        color: #fff;
+    }
+
+    .dark ::selection {
+        background-color: #fff;
+        color: #000;
+    }
+
+}
+

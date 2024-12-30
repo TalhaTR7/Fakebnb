@@ -1,0 +1,92 @@
+.category-container {
+    border-top: 1px #eee solid;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 5px 10px #ddd;
+    position: fixed;
+    z-index: 999;
+
+    .list-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin: auto 120px;
+
+        .list {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            a {
+                padding: 25px 0px;
+                font-size: 14px;
+                text-align: center;
+                min-width: 90px;
+                font-family: Arial;
+                cursor: pointer;
+                color: #aaa;
+                transition: color 0.3s ease;
+
+                &:hover,
+                &.active {
+                    color: #000;
+                }
+            }
+        }
+
+        .fade-left,
+        .fade-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 300px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .fade-left {
+            left: 0;
+            background: linear-gradient(to right, #ffffffcc, transparent);
+        }
+
+        .fade-right {
+            right: 0;
+            background: linear-gradient(to left, #ffffffcc, transparent);
+        }
+    }
+
+    &.scrolled {
+        top: 110px;
+        z-index: 999;
+    }
+
+    &.dark {
+        background-color: #111;
+        box-shadow: 0 5px 10px #000;
+        border-top: 1px #000 solid;
+
+        .list-wrapper {
+            .list a {
+                color: #777;
+
+                &:hover,
+                &.active {
+                    color: #fff;
+                }
+            }
+
+            .fade-left {
+                background: linear-gradient(to right, #111111cc, transparent);
+            }
+
+            .fade-right {
+                background: linear-gradient(to left, #111111cc, transparent);
+            }
+        }
+    }
+}
